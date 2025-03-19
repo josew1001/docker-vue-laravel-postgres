@@ -17,4 +17,16 @@ export default defineConfig({
             },
         }),
     ],
+    resolve: {
+        alias: {
+            vue: 'vue/dist/vue.esm-bundler.js',
+        },
+    },
+    server: {
+        host: '0.0.0.0', // Ensures accessibility inside Docker
+        port: 5173,
+        watch: {
+            usePolling: true,
+        },
+    },
 });
